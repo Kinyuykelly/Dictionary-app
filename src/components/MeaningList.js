@@ -1,26 +1,19 @@
 import React from "react"
 
-export default function MeaningList(props){
-    console.log(props.mean)
+export default function meaningsList(props){
    return(
-    <div>
-        {props.mean.map(function(definitions, index){
-            return(
-                <div key={index}>
-                    <li className="text-dark">
-                        
-                        {definitions.definition}
-                    </li>
-                </div>
-            )
-        })}
-        {/* {mean.map(val => val.meanings.map(mean.definitions.map(def => (
-            <div key={def.definition}>
-                <li >
-                    {def.definition}
-                </li>
+    <div className="">
+        {props.mean.map((meanings, index) =>(
+            <div key={index}>
+               <h4>{meanings.partOfSpeech}</h4> 
+               {meanings.definitions.map((definition, idx) => (
+                                <div key={idx}>
+                                    <p>{definition.definition}</p>
+                                </div>
+                            ))}
             </div>
-        ))))} */}
+        )
+    )}
     </div>
    );
 }

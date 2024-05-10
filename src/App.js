@@ -1,4 +1,3 @@
-import { createContext, useState } from "react";
 import Dictionary from "./components/Dictionary";
 
 

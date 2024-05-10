@@ -2,6 +2,8 @@ import React from "react";
 import { useState } from "react";
 import Result from "./Result";
 import axios from "axios";
+import "./Dictionary.css"
+import Logo from "../assets/find-book-icon.svg"
 
 export default function Dictionary() {
   const [word, setWord] = useState("");
@@ -39,19 +41,22 @@ export default function Dictionary() {
   };
 
   return (
-    <div className="header">
-      <div className="bg-orange-100">
+    <div className="dictionary">
+      <div className="header">
         <div className="container mx-auto py-8">
+          <div className="flex justify-center gap-1">
+           <img className="logo" src={Logo} alt="logo" />
           <h1 className="text-3xl font-bold text-center text-white">
             {" "}
             Simple Dictionary{" "}
           </h1>
+          </div>
           <p className="text-center mt-1 mb-10 text-slate-300 text-lg">
             Find definitions for words
           </p>
           <div className="flex items-center justify-center mt-5">
             <form
-              className="flex border-2 border-gray-200 rounded sm:w-30"
+              className="flex border-2 border-white rounded sm:w-30"
               onSubmit={handleSubmit}
             >
               <input
@@ -63,7 +68,7 @@ export default function Dictionary() {
               />
               <button
                 type="submit"
-                className="bg-orange-400 border-z py-2 text-white w-40"
+                className="button border-z py-2 text-white w-40"
               >
                 Search
               </button>
