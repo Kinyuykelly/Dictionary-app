@@ -14,9 +14,9 @@ export default function Dictionary() {
       ready: true,
       wordName: response.data[0].word,
       meanings: response.data[0].meanings,
-      antonyms: response.data[0].meanings[0].antonyms,
+      anthonyms: response.data[0].meanings[0].anthonyms,
       synonyms: response.data[0].meanings[0].synonyms,
-      phoenetic: response.data[0].phoenetic,
+      example: response.data[0].meanings,
     });
   };
 
@@ -39,6 +39,12 @@ export default function Dictionary() {
       setWord(event.target.value);
     }
   };
+
+  function titlecase(str) {
+    return (
+        str.charAt(0).toUpperCase() + str.slice(1)
+    );
+} 
 
   return (
     <div className="dictionary">
@@ -79,8 +85,8 @@ export default function Dictionary() {
       {wordData.ready ? (
         <div>
           <h3 className="text-center mt-4">
-            Result for:{" "}
-            <span className="font-bold">{wordData.wordName}</span>
+            Result for {" "}:{"  "}
+            <span className="font-bold">{titlecase(wordData.wordName)}</span>
           </h3>
           <Result data={wordData} />
         </div>
