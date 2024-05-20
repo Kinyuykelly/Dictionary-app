@@ -74,7 +74,7 @@ export default function Dictionary() {
               />
               <button
                 type="submit"
-                className="button border-z py-2 text-white w-40"
+                className="button py-2 text-white w-40"
               >
                 Search
               </button>
@@ -82,6 +82,7 @@ export default function Dictionary() {
           </div>
         </div>
       </div>
+      
       {wordData.ready ? (
         <div>
           <h3 className="text-center mt-4">
@@ -92,10 +93,10 @@ export default function Dictionary() {
         </div>
       ) : (
         <div className="text-center mt-4">
-          <p className="text-gray-600">
-            Enter a word to search for its definition.
-          </p>
-        </div>
+        <p className="text-gray-600">
+          Enter a word to search for its definition.
+        </p>
+      </div>
       )}
     </div>
   );

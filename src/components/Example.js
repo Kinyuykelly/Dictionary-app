@@ -9,14 +9,16 @@ export default function Example(props) {
             {props.mean.map(function(meanings, index) {
                 return (
                     <div key={index}>
-                        {meanings.definitions.map(function(definition, idx) {
-                           
+                        {meanings.definitions.map(function(definition, idx) {   
+                            if (definition.example ) {
                                 return (
                                     <div key={idx}>
                                         <li>{definition.example}</li>
                                     </div>
                                 );
-                            
+                            } else {
+                                return null;
+                            }
                         })}
                     </div>
                 );

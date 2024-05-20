@@ -5,8 +5,7 @@ import Synonym from "./Synonym";
 import Anthonym from "./Anthonym";
 import Example from "./Example";
 
-export default function Result(props) {
-    console.log(props)
+export default function Result(props){
   return (
     <div className="result container mx-auto p-4 max-w-2xl">
       <div className="flex gap-5 justify-center">

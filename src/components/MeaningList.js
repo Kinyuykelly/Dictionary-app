@@ -8,7 +8,7 @@ function titlecase(str) {
     } 
   return (
     <div className="meaning">
-     <h3 className="text-center font-bold text-xl">Meaning</h3>
+     <h3 className="text-center font-bold text-xl">Meaning and Definitions</h3>
      {props.mean.map(function(meanings, index) {
         if (index < 6) {
           return (

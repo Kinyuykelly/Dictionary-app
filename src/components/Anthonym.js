@@ -15,6 +15,7 @@ export default function Anthonym(props){
                 </div>
                 )
                }
+               return null;
 })
         ) : (
             <div>No anthonyms found</div>
